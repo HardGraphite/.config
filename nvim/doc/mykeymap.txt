@@ -1,0 +1,107 @@
+*mykeymap.txt*            My Key Maps Config
+
+
+TOC
+
++ Move Cursor ------------------------- |mkm-mvcur|
++ Window ------------------------------ |mkm-win|
+
+===============================================================================
+Move Cursor                                                         *mkm-mvcur*
+
+In Normal / Visual mode, use HJKL to move cursor; use Shift+HJKL to move cursor
+faster; use Meta(Alt)+Shift+HL to move to Home/End:
+
+          ^                 ^^^
+          k                  K
+     < h  +  l >       << H  +  L >>      |<- <M-S-h>  +   <M-S-l> ->|
+          j                  J
+          v                 vvv
+
+In Insert / Terminal mode, use Meta(Alt)+HJKL to move cursor:
+
+              ^
+            <M-k>
+     < <M-h>  +  <M-l> >     |<- <M-S-h>  +   <M-S-l> ->|
+            <M-j>
+              v
+
+  ----------+-----------------------------
+     MODE   |  MOVE   QUICK-MOVE HOME/END
+  ----------+-----------------------------
+    Normal  |  <x>      <S-x>     <M-S-x>
+    Visual  |  <x>      <S-x>     <M-S-x>
+    Insert  | <M-x>     (n/a)     <M-S-x>
+   Terminal | <M-x>     (n/a)     <M-S-x>
+  ----------+-----------------------------
+  +: '<x>' = h/j/k/l, M = Meta(Alt), S = Shift, C = Control
+
+===============================================================================
+Window                                                              *mkm-win*
+
+To create(slpit) window in Normal mode, use <Leader>s + h/j/k/l. 's' means
+split. Equivalent commands are(in order of h,l,k,j): >
+    set nosplitright<CR>:vsplit<CR>
+    set splitright<CR>:vsplit<CR>
+    set nosplitbelow<CR>:split<CR>
+    set splitbelow<CR>:split<CR>
+<
+
+To change layout (horizonal / virtical) in Normal mode, use <Leader>s + H/V.
+Equivalent commands are (in order V,H): >
+    <C-w>t<C-w>H
+    <C-w>t<C-w>K
+<
+
+To resize window in Normal mode, use <Leader>ss + H/J/K/L. Equivalent commands
+are(in order of h,l,k,j): >
+    vertical resize+5<CR>
+    vertical resize-5<CR>
+    res +5<CR>
+    res -5<CR>
+<
+
+To move focus on other window, use <C-M-x>, where <x> is h/j/k/l. This works
+in any mode but Visual mode.
+     +---------------------------+--------------------------------+
+     |                           |                                |
+     |                           |                                |
+     |                           |                                |
+     |                           |           Win-2                |
+     |                           |                                |
+     |                        <===== <C-M-h>                      |
+     |                           |                     ^   <C-M-j>|
+     |          Win-1            |                     #      #   |
+     |                           +---------------------#------#---+
+     |                           |                     #      #   |
+     |                           |                  <C-M-k>   v   |
+     |                           |           Win-3                |
+     |                  <C-M-l> =====>                            |
+     |                           |                                |
+     |                       <===== <C-M-h>                       |
+     |                           |                                |
+     +---------------------------+--------------------------------+
+
+
+===============================================================================
+
+     +------------------------------------------------------------+
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                         My NeoVim                          |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     |                                                            |
+     +------------------------------------------------------------+
+
+vim: ft=help

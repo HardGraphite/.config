@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/run/media/chen/E01C62371C62093C/Users/jydch/Documents/SourceCode/PC/Python/串口屏幕'
+let g:netrw_dirhist_6='/home/chen/links/win/home/Documents/SourceCode/PC/Python/串口与数据'
+let g:netrw_dirhist_5='/home/chen/links/win/home/Documents/SourceCode/PC/Python'
+let g:netrw_dirhist_4='/home/chen/links/win/home/Documents/SourceCode/PC/Python/串口与数据'
+let g:netrw_dirhist_3='/home/chen/links/win/home/Documents/SourceCode/PC/Python'
+let g:netrw_dirhist_2='/home/chen/links/win/home/Documents/SourceCode/PC'
+let g:netrw_dirhist_1='/home/chen/links/win/home/Documents/SourceCode'
+let g:netrw_dirhist_0='/home/chen/links/win/home/Documents'
+let g:netrw_dirhist_9='/home/chen/links/win/home/Documents/Temporary'
+let g:netrw_dirhist_8='/home/chen/links/win/home/Documents'

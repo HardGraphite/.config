@@ -1,0 +1,15 @@
+/*
+
+!.gitignore
+!/alacritty/
+!/fish/
+!/i3/
+!/nvim/
+nvim/plugged/*
+!/polybar/
+!/powerline/
+!/ranger/
+ranger/plugins/*
+!/rofi/
+
+

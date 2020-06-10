@@ -1,0 +1,23 @@
+{
+    "coc.preferences.noselect": false,
+    "coc.preferences.bracketEnterImprove": true,
+    "coc.preferences.extensionUpdateCheck": "never",
+
+    "python.pythonPath": "/usr/bin/python3",
+    "python.autoComplete.addBrackets": true,
+    "python.autoUpdateLanguageServer": false,
+
+    "languageserver": {
+        "ccls": {
+           "command": "ccls",
+           "filetypes": ["c", "cpp", "objc", "objcpp"],
+           "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+           "initializationOptions": {
+               "cache": {
+                   "directory": "/tmp/ccls"
+               }
+           }
+        }
+    }
+}
+

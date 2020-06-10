@@ -1,0 +1,22 @@
+{
+    "power": {
+        "power-off now": "shutdown --poweroff now",
+        "reboot now": "shutdown --reboot  now",
+        "cancel pending shutdowns": "shutdown -c",
+        "halt now (!)": "shutdown --halt now",
+        "↩ abort": ""
+    },
+
+    "translate": {
+        "You-Dao" : "~/.config/rofi/scripts/assets/translate/translate.sh &"
+    },
+
+    "screen-shot": {
+        "cut": "~/Pictures/screenshot/screenshot.sh"
+    },
+
+    "VBox": {
+        "Windows 7": "VBoxSDL --startvm Win7 > /dev/null 2>&1 &"
+    }
+}
+
