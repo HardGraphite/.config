@@ -9,6 +9,7 @@ SETUVAR _fish_abbr__2E_2E_2E_:\x2e\x2e/\x2e\x2e/
 SETUVAR _fish_abbr_c:cd
 SETUVAR _fish_abbr_cf:cd\x20\x28fzf\x29
 SETUVAR _fish_abbr_l:ls
+SETUVAR _fish_abbr_lg:lazygit
 SETUVAR _fish_abbr_md:mkdir
 SETUVAR _fish_abbr_r:ranger\x2dcd
 SETUVAR _fish_abbr_s_2D_:sudo\x20\x2dE

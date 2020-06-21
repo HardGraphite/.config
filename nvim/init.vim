@@ -231,7 +231,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release',  'do': { -> coc#util#install()}}
 
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 

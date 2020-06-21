@@ -4,12 +4,10 @@
 !/alacritty/
 !/fish/
 !/i3/
+!/jesseduffield/
 !/nvim/
-nvim/plugged/*
 !/polybar/
 !/powerline/
 !/ranger/
-ranger/plugins/*
 !/rofi/
-
 

@@ -1,5 +1,5 @@
 {
-    "coc.preferences.noselect": false,
+    "suggest.noselect": false,
     "coc.preferences.bracketEnterImprove": true,
     "coc.preferences.extensionUpdateCheck": "never",
 

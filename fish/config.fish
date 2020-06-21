@@ -341,6 +341,7 @@ abbr -a  t   touch
 abbr -a  v   nvim
 #abbr -a  r   ranger
 abbr -a  r   ranger-cd
+abbr -a  lg  lazygit
 abbr -a  ... ../../
 
 # ===== key bindings =====
@@ -352,6 +353,8 @@ set -x JAVA_HOME "/opt/oracle/jdk1.8.0_211"
 set -x CLASSPATH "$JAVA_HOME/lib" "."
 # --- qt5 ---
 set -x QT_LOGGING_RULES "qt5ct.debug=false"
+# --- latex ---
+set -x PATH $PATH "/opt/texlive/2019/bin/x86_64-linux"
 # - ranger -
 set -x EDITOR nvim
 # --- fzf config ---
