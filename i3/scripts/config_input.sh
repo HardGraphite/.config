@@ -3,7 +3,7 @@
 xinput set-prop 'Synaptics TM3289-002' 'libinput Tapping Enabled' 1
 xinput set-prop 'Synaptics TM3289-002' 'libinput Tapping Drag Enabled' 1
 xinput set-prop 'Synaptics TM3289-002' 'libinput Natural Scrolling Enabled' 1
-xinput set-prop 'TPPS/2 Elan TrackPoint' 'libinput Accel Speed' 0.5
+xinput set-prop 'TPPS/2 Elan TrackPoint' 'libinput Accel Speed' 0.96
 
 #fcitx-autostart && sogou-qimpanel
 fcitx &

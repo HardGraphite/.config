@@ -7,6 +7,8 @@
 " init.vim, neovim config file, V1.3
 " Chen Yudi, 2019.12
 
+if !exists('g:vscode')
+
 " ======= basic ======
 set encoding=utf-8
 "set nocompatible
@@ -373,4 +375,6 @@ nnoremap <Leader>tt :NERDTreeToggle<CR>
 "autocmd VimEnter * if argc() == 0 | NERDTree | endif
 "let g:NERDTreeDirArrowExpandable = '▸'
 "let g:NERDTreeDirArrowCollapsible = '▾'
+
+endif " !exists('g:vscode')
 

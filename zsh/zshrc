@@ -1,0 +1,12 @@
+
+if [[ $TERM = 'linux' ]]; then
+    #setfont /usr/share/kbd/consolefonts/ter-v32b.psf.gz
+    setfont /usr/share/kbd/consolefonts/ter-g28b.psf.gz
+else
+    [[ -f $ZSHDIR/omz_init.zsh ]] && source $ZSHDIR/omz_init.zsh
+    [[ -f $ZSHDIR/p10k.zsh     ]] && source $ZSHDIR/p10k.zsh
+    [[ -f $ZSHDIR/custom.zsh   ]] && source $ZSHDIR/custom.zsh
+fi
+
+#[[ -f $ZSHDIR/greeting.sh ]] && source $ZSHDIR/greeting.sh
+
