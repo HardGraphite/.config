@@ -55,17 +55,18 @@ padding-right = 1
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = "Hack:size=11:style=Regular;1"
+font-0 = "DejaVu Sans:size=12:style=Regular;1"
 font-1 = "Source Han Sans CN:size=12:style=Regular;0"
 font-2 = "Source Code Pro:style=Regular:size=11;1"
 font-3 = "SauceCodePro NF:style=Regular:size=16;2"
+font-4 = "Symbola:style=Regular:size=16;0"
 
 modules-left = i3 xwindow
 ;modules-right = filesystem xbacklight alsa xkeyboard memory cpu wlan eth battery temperature date
 modules-right = qmenu xkeyboard memory cpu temperature wlan battery alsa xbacklight date user
 
 tray-position = right
-tray-padding = 1
+tray-padding = 3
 ; <radius> doesn't work
 tray-radius = 8.0
 tray-transparent = true
@@ -93,7 +94,9 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label =  %title:0:30:...%
+label = %title:0:50:...%
+label-empty = " "
+format = " <label>"
 format-foreground = #fea
 format-margin = 1
 
@@ -101,7 +104,7 @@ format-margin = 1
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = "⌨  "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = #3344df
 
@@ -166,17 +169,17 @@ label-focused-underline= ${colors.primary}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = "%index%"
+label-unfocused = " %index% "
 label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = " %index% "
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = "< %index% >"
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -191,10 +194,15 @@ label-urgent-padding = 2
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label><bar>
+format = <ramp><bar>
 label = " "
+ramp-0 = "🌕 "
+ramp-1 = "🌔 "
+ramp-2 = "🌓 "
+ramp-3 = "🌒 "
+ramp-4 = "🌑 "
 
-bar-width = 10
+bar-width = 8
 bar-indicator = +
 bar-indicator-foreground = #fff
 bar-indicator-font = 2
@@ -234,15 +242,12 @@ interval = 5.0
 format-connected = <label-connected>
 ;format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-label-connected = "%essid% %signal%%"
+label-connected = "%essid%%signal%%"
 
-format-disconnected = " -?-"
+format-disconnected = <label-disconnected>
 format-disconnected-foreground = #ff1010
 format-disconnected-underline = #9f78e1
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+label-disconnected = "%ifname% "
 
 ;ramp-signal-0 = 0
 ;ramp-signal-1 = 1
@@ -257,7 +262,7 @@ interface = enp0s31f6
 interval = 10.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = "ETH "
+format-connected-prefix = "🖧 "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
@@ -277,7 +282,7 @@ date-alt = "%Y.%m.%d"
 time = "%H:%M"
 time-alt = "%H:%M:%S"
 
-format-prefix =
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a8cf5
 
@@ -286,15 +291,20 @@ label = %date% %time%
 [module/alsa]
 type = internal/alsa
 
-format-volume = <label-volume><bar-volume>
+format-volume = <ramp-volume><bar-volume>
 label-volume = " "
 label-volume-foreground = ${root.foreground}
+ramp-volume-0 = "🔈 "
+ramp-volume-1 = "🔉 "
+ramp-volume-2 = "🔊 "
+ramp-headphones-0 = " "
+ramp-headphones-1 = " "
 
 ;format-muted-prefix =
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = " MUTE "
+label-muted = "🔇 MUTE "
 
-bar-volume-width = 10
+bar-volume-width = 8
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
@@ -318,7 +328,7 @@ adapter = ADP1
 full-at = 98
 poll-interval = 10
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging>🔌<label-charging>
 format-charging-underline = #ffb52a
 
 ;format-discharging = Bat <animation-discharging> <label-discharging>
@@ -329,7 +339,7 @@ format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = "%{B#f00}%{F#fff}! %{F-}"
+ramp-capacity-0 = "%{B#f00}%{F#fff}!🔋%{F-}"
 ramp-capacity-1 = ""
 ramp-capacity-2 = ""
 ramp-capacity-3 = ""

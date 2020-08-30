@@ -1,11 +1,13 @@
 {
-    "suggest.noselect": false,
     "coc.preferences.bracketEnterImprove": true,
-    "coc.preferences.extensionUpdateCheck": "never",
+    "coc.preferences.extensionUpdateCheck": "weekly",
+    "codeLens.enable": true,
+    "diagnostic.checkCurrentLine": true,
+    "suggest.noselect": false,
 
     "python.pythonPath": "/usr/bin/python3",
-    "python.autoComplete.addBrackets": true,
-    "python.autoUpdateLanguageServer": false,
+    "python.autoComplete.addBrackets": false,
+    "python.autoUpdateLanguageServer": true,
 
     "languageserver": {
         "ccls": {

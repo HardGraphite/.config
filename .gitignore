@@ -2,6 +2,7 @@
 
 !.gitignore
 !/alacritty/
+!/dunst/
 !/fish/
 !/i3/
 !/jesseduffield/
